@@ -1,0 +1,24 @@
+
+
+CREATE COMPUTE MODULE IntroTOmessageflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		
+		--set OutputRoot = InputRoot;
+		/**
+		Explanation: In this line we are copying whole InputRoot (ie,Properties,MQMD,XMLNSC-MsgBody)
+		
+		**/
+		
+	set OutputRoot.XMLNSC = InputRoot.XMLNSC;
+       /**
+        Explanation: In this line we are copying message body alone(ie,Properties,MQMD,XMLNSC-MsgBody)
+		**/
+		set OutputRoot=InputRoot;
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;
