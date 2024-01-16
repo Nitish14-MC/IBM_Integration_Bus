@@ -1,0 +1,13 @@
+
+
+CREATE COMPUTE MODULE Msg_flow_Exception_Handling
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		
+		set OutputRoot.XMLNSC.Exception=InputExceptionList;
+		RETURN TRUE;
+	
+	END;
+END MODULE;

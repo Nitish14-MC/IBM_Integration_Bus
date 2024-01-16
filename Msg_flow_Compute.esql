@@ -1,0 +1,13 @@
+
+
+CREATE COMPUTE MODULE Msg_flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		
+		SET OutputRoot=InputRoot;
+		RETURN TRUE;
+
+	END;
+END MODULE;

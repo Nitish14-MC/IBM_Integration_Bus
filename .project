@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>01-IntroductionToToolkitAndMessageFlow</name>
+	<name>02-Creating_A_MessageSet_and validating it</name>
 	<comment></comment>
 	<projects>
+		<project>DemoMsgSet</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
